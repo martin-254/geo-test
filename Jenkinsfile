@@ -11,7 +11,12 @@ pipeline{
             sh 'echo hi'
         }
     }
-    
+    stage('martin'){
+        steps{
+            sh 'echo martins job'
+        }
+    }
+
     }
     
 }
