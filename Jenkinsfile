@@ -25,9 +25,9 @@ pipeline{
             nexusArtifactUploader artifacts: [[artifactId: 'bioMedical', 
             classifier: '', file: 'target/bioMedical-0.0.4-SNAPSHOT.jar',
              type: 'JAR']], credentialsId: 'nexus-id', groupId: 'qa', 
-             nexusUrl: '198.58.119.40:8081/repository/m-k/bioMedical-0.0.4-SNAPSHOT.jar', 
+             nexusUrl: '198.58.119.40:8081/repository/m-k/ ,
              nexusVersion: 'nexus3', protocol: 'http', repository: 'geo-test', 
-             version: '004'
+             version: '0.0.4'
         }
      }  
     }
