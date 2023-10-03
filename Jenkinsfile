@@ -22,8 +22,13 @@ pipeline{
     }
      stage('upload artifact')  {
         steps{
-           sh 'curl --upload-file target/bioMedical-0.0.5-SNAPSHOT.jar -u admin:devops -v http://198.58.119.40:8081/repository/m-k/'
-        }
+           nexusArtifactUploader artifacts: [[artifactId: 'bioMedical', 
+           classifier: '', file: 'target/bioMedical-0.0.6-SNAPSHOT.jar',
+            type: 'jar']], credentialsId: 'nexus-id', groupId: 'qa',
+             nexusUrl: '198.58.119.40:8081/repository/m-k/', 
+             nexusVersion: 'nexus3', protocol: 'http', repository: 'geo-test',
+
+            version: '006'
      }  
     }
 }
