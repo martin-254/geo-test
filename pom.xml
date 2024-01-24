@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.spring</groupId>
 	<artifactId>bioMedical</artifactId>
-	<version>0.0.7-RELEASE</version>
+	<version>0.0.6-SNAPSHOT</version>
 	<name>bioMedical</name>
 	<description>Demo project for Spring Boot</description>
 	<packaging>jar</packaging>
@@ -65,11 +65,12 @@
   			<version>1.2.3</version>
 		</dependency>
 
-		<dependency>
-			<groupId>net.sourceforge.nekohtml</groupId>
-			<artifactId>nekohtml</artifactId>
-			<version>1.9.23</version>
-		</dependency>
+	    <dependency> 
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>3.10.0</version>
+        </dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
