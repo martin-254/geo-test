@@ -20,7 +20,7 @@ pipeline{
     
         }
     }
-     stage('upload artifact')  {
+    stage('upload artifact')  {
         steps{
            nexusArtifactUploader artifacts: [[artifactId: 'bioMedical', 
            classifier: '', file: 'target/bioMedical-0.0.6-SNAPSHOT.jar',
