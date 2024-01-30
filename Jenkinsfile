@@ -22,16 +22,16 @@ pipeline{
     }
     stage('upload artifact') {
         steps{nexusArtifactUploader artifacts: 
-        [[artifactId: '$POM_GROUPID', 
+        [[artifactId: 'geo-test', 
         classifier: '${POM_PACKAGING}', 
         file: ' target/${POM_ARTIFACTID}-${POM_VERSION}.${POM_PACKAGING}', 
         type: '${POM_ARTIFACTID}']], 
         credentialsId: 'jenkins-user', 
-        groupId: '', 
+        groupId: '$POM_GROUPID', 
         nexusUrl: 'http://ec2-13-59-42-35.us-east-2.compute.amazonaws.com:8081', 
         nexusVersion: 'nexus3', 
         protocol: 'http', 
-        repository: 'maven-nexus-repo', 
+        repository: 'geo-test', 
         version: '${POM_VERSION}'}
     }
 }
