@@ -28,7 +28,7 @@ pipeline{
         type: '${POM_ARTIFACTID}']], 
         credentialsId: 'jenkins-user', 
         groupId: '$POM_GROUPID', 
-        nexusUrl: 'http://ec2-13-59-42-35.us-east-2.compute.amazonaws.com:8081', 
+        nexusUrl: 'ec2-13-59-42-35.us-east-2.compute.amazonaws.com:8081', 
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'geo-test', 
