@@ -22,17 +22,17 @@ pipeline{
     }
     stage('upload artifact') {
         steps{nexusArtifactUploader artifacts: 
-        [[artifactId: 'geo-test', 
-        classifier: '${POM_PACKAGING}', 
-        file: ' target/${POM_ARTIFACTID}-${POM_VERSION}-${POM_PACKAGING}', 
-        type: '${POM_ARTIFACTID}']], 
-        credentialsId: 'jenkins-user', 
-        groupId: '$POM_GROUPID', 
+        [[artifactId: '${POM_GROUPID}', 
+        classifier: '', 
+        file: 'target/${POM_GROUPID}-${POM_VERSION}.${POM_PACKAGE}', 
+        type: '${POM_PACKAGE}']], 
+        credentialsId: 'jenkins-user-credentials', 
+        groupId: '${POM_GROUPID}', 
         nexusUrl: 'ec2-13-59-42-35.us-east-2.compute.amazonaws.com:8081', 
         nexusVersion: 'nexus3', 
         protocol: 'http', 
         repository: 'geo-test', 
-        version: '${POM_VERSION}'}
+        version: ' ${POM_VERSION}'}
     }
 }
     
