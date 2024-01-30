@@ -24,7 +24,7 @@ pipeline{
         steps{nexusArtifactUploader artifacts: 
         [[artifactId: 'geo-test', 
         classifier: '${POM_PACKAGING}', 
-        file: ' target/${POM_ARTIFACTID}-${POM_VERSION}.${POM_PACKAGING}', 
+        file: ' target/${POM_ARTIFACTID}-${POM_VERSION}-${POM_PACKAGING}', 
         type: '${POM_ARTIFACTID}']], 
         credentialsId: 'jenkins-user', 
         groupId: '$POM_GROUPID', 
